@@ -1,0 +1,19 @@
+<ng-container ngSwitch=""></ng-container>
+
+<ng-container [ngSwitch]="this.currentPage">
+
+    <app-ob-profile *ngSwitchCase="0"></app-ob-profile>
+    <app-ob-education *ngSwitchCase="1"></app-ob-education>
+    <app-ob-job *ngSwitchCase="2"></app-ob-job>
+    <app-ob-living *ngSwitchCase="3"></app-ob-living>
+    <app-ob-insurance *ngSwitchCase="4"></app-ob-insurance>
+    <app-ob-mobility *ngSwitchCase="5"></app-ob-mobility>
+    <app-ob-overview *ngSwitchCase="6"></app-ob-overview>
+
+</ng-container>
+
+
+<app-button *ngIf="this.currentPage < 6" text="Weiter" (click)="btnClicked(1)"></app-button>
+<app-button *ngIf="this.currentPage === 6" (click)="this.startGame()" text="Spiel starten"></app-button>
+
+<app-button *ngIf="this.currentPage > 0" text="Zurück" (click)="btnClicked(-1)" [isPrimary]="false"></app-button>

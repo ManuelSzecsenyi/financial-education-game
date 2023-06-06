@@ -1,0 +1,32 @@
+<h1>Versicherung</h1>
+
+<div class="text-center grid gap-4 ">
+
+    <app-selection 
+        (click)="this.state.state.insurance.apartment = !this.state.state.insurance.apartment"
+        [active]="this.state.state.insurance.apartment">
+            <img class="w-32 mx-auto" src="assets/book-shelf.png">
+            <h3>Haushaltsversicherung</h3>
+            <h4 class="leading-4 mt-3">€ 15,- <br>
+            <span class="text-sm">pro Monat</span></h4>
+    </app-selection>
+
+    <app-selection 
+        (click)="this.state.state.insurance.phone = !this.state.state.insurance.phone"
+        [active]="this.state.state.insurance.phone">
+            <img class="w-32 mx-auto" src="assets/front-camera-flash.png">
+            <h3>Handyversicherung</h3>
+            <h4 class="leading-4 mt-3">€ 10,- <br>
+            <span class="text-sm">pro Monat</span></h4>
+    </app-selection>
+
+    <app-selection 
+        (click)="this.state.state.insurance.law = !this.state.state.insurance.law"
+        [active]="this.state.state.insurance.law">
+            <img class="w-32 mx-auto" src="assets/gavel.png">
+            <h3>Rechtsschutz</h3>
+            <h4 class="leading-4 mt-3">€ 15,- <br>
+            <span class="text-sm">pro Monat</span></h4>
+    </app-selection>
+
+</div>

@@ -1,0 +1,32 @@
+<h1>Mobilität</h1>
+
+<div class="text-center grid gap-4 ">
+
+    <app-selection 
+        (click)="this.state.state.mobility.car= !this.state.state.mobility.car"
+        [active]="this.state.state.mobility.car">
+            <img class="w-32 mx-auto" src="assets/car-1.png">
+            <h3>Auto</h3>
+            <h4 class="leading-4 mt-3">€ 300,- <br>
+            <span class="text-sm">pro Monat</span></h4>
+    </app-selection>
+
+    <app-selection 
+        (click)="this.state.state.mobility.bike= !this.state.state.mobility.bike"
+        [active]="this.state.state.mobility.bike">
+            <img class="w-32 mx-auto" src="assets/bike-parking.png">
+            <h3>Fahrrad</h3>
+            <h4 class="leading-4 mt-3">€ 10,- <br>
+            <span class="text-sm">pro Monat</span></h4>
+    </app-selection>
+
+    <app-selection 
+        (click)="this.state.state.mobility.publicTransport= !this.state.state.mobility.publicTransport"
+        [active]="this.state.state.mobility.publicTransport">
+            <img class="w-32 mx-auto" src="assets/bus-transit-ticket.png">
+            <h3>Öffis</h3>
+            <h4 class="leading-4 mt-3">€ 31,- <br>
+            <span class="text-sm">pro Monat</span></h4>
+    </app-selection>
+
+</div>
